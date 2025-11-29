@@ -1,4 +1,4 @@
-const socket = io('http://localhost:4000');
+const socket = io('https://group-chat-backend-jxtj.onrender.com');
 const form = document.getElementById('send-container');
 const messageInput = document.getElementById('messageInp');
 const messageContainer = document.querySelector(".container");
@@ -36,5 +36,6 @@ socket.on('receive', data => {
     append(`${data.name}: ${data.message}`, 'left');
 
 })
+
 
 
